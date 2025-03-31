@@ -1,0 +1,432 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    /* Substitua pelo código da cor desejada */
+    color: #333;
+    /* Cor do texto (opcional, para contraste) */
+    margin: 0;
+    /* Remove margens padrão */
+    padding: 0;
+    /* Remove preenchimentos padrão */
+    font-family: Arial, sans-serif;
+    /* Define uma fonte padrão (opcional) */
+}
+
+a {
+    color: #000000;
+    /* Cor do texto dos links */
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+.header {
+    display: flex;
+    /* Ativa o flexbox no cabeçalho */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    justify-content: space-between;
+    /* Espaça os itens (logo à esquerda, navegação à direita) */
+    width: 100%;
+    /* Garante que o cabeçalho ocupe toda a largura */
+    height: 10vh;
+    /* Define a altura do cabeçalho */
+    background: #f0f0f0;
+    box-shadow: 0 5px 0 rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+    /* Adiciona espaçamento interno nas laterais */
+    box-sizing: border-box;
+    /* Inclui o padding no cálculo do tamanho */
+    overflow: hidden;
+    /* Garante que nada saia do cabeçalho */
+}
+
+.logo {
+    width: 250px;
+    /* Largura da logo */
+    height: auto;
+    /* Mantém a proporção da imagem */
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    background: #f0f0f0;
+    height: 8vh;
+}
+
+.nav-list {
+    display: flex;
+    /* Exibe os itens lado a lado */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    justify-content: flex-end;
+    /* Alinha os itens à direita */
+    list-style: none;
+    /* Remove os marcadores da lista */
+    margin: 0;
+    /* Remove margens extras */
+    padding: 0;
+    /* Remove preenchimentos extras */
+    gap: 15px;
+    /* Espaçamento entre os itens */
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    /* Espaçamento entre letras */
+    margin-left: 32px;
+    padding: 0;
+    /* Remove preenchimentos extras */
+}
+
+.nav-list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    /* Remove sublinhado dos links */
+}
+
+.material-icons {
+    font-size: 50px;
+    /* Tamanho dos ícones restantes */
+    color: #000000;
+    /* Cor dos ícones */
+}
+
+.mobile-menu {
+    cursor: pointer;
+    /* Muda o cursor para indicar que é clicável */
+    display: none;
+}
+
+.mobile-menu div {
+    width: 32px;
+    /* Largura do ícone do menu */
+    height: 3px;
+    /* Altura do ícone do menu */
+    background-color: #000;
+    /* Cor do ícone do menu */
+    margin: 8px 0;
+    /* Espaçamento entre as linhas do menu */
+    transition: 0.3s;
+}
+
+.user-photo {
+    width: 50px;
+    /* Define a largura da foto */
+    height: 50px;
+    /* Define a altura da foto */
+    border-radius: 50%;
+    /* Torna a imagem circular */
+    margin-left: 32px;
+    /* Espaçamento entre os ícones e a foto */
+    margin-right: 18px;
+    object-fit: cover;
+    /* Garante que a imagem se ajuste ao contêiner */
+    cursor: pointer;
+    /* Mostra o cursor de link ao passar o mouse */
+}
+
+.scrap {
+    display: flex; /* Ativa o flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (opcional, se necessário) */
+    width: 100%; /* Faz a div ocupar toda a largura */
+    margin-top: 20px; /* Adiciona espaçamento superior */
+}
+
+.scrap form {
+    display: flex; /* Alinha o input e o botão lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 0; /* Remove o espaçamento entre o input e o botão */
+    width: 80%; /* Faz o formulário ocupar 95% da largura da div */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+.scrap input[type="url"] {
+    flex: 1; /* Faz o input ocupar o máximo de espaço disponível */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-right: none; /* Remove a borda direita para unir ao botão */
+    border-radius: 15px 0 0 15px; /* Bordas arredondadas apenas à esquerda */
+    font-size: 18px;
+    background-color: #f0f0f0; /* Cor de fundo do input */
+    outline: none; /* Remove o contorno ao focar */
+    box-shadow: inset -3px -3px 5px rgba(0, 0, 0, 0.1); /* Inner shadow no lado superior e direito */
+}
+
+.scrap input[type="url"]::placeholder {
+    font-size: 20px; /* Aumenta o tamanho da fonte do placeholder */
+    color: #333435; /* Define uma cor para o placeholder */
+}
+
+.scrap button {
+    width: 20%; /* Faz o botão ocupar 20% da largura da div */
+    padding: 20px 0; /* Ajusta o espaçamento interno */
+    background-color: #32ca34; /* Cor de fundo verde */
+    color: #333435; /* Cor do texto */
+    border: none; /* Remove a borda */
+    border-radius: 0 15px 15px 0; /* Bordas arredondadas apenas à direita */
+    cursor: pointer; /* Mostra o cursor de link ao passar o mouse */
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Define a fonte como Poppins */
+    text-transform: uppercase; /* Texto em letras maiúsculas */
+    text-align: center; /* Centraliza o texto no botão */
+}
+
+.scrap button:hover {
+    background-color: #218838; /* Cor verde mais escura ao passar o mouse */
+    color: #ffffff;
+}
+
+.scrap-result {
+    margin-top: 0px;
+    width: 60%;
+    height: 70vh; /* Define a altura como 60% da altura da tela */
+    padding: 0px;
+    background-color: #f9f9f9; /* Fundo claro */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: auto; /* Adiciona barra de rolagem se o conteúdo ultrapassar a altura */
+}
+
+.scrap-result h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    color: #333435;
+}
+
+.scrap-result ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0;
+}
+
+.scrap-result ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd; /* Linha separadora */
+    font-size: 16px;
+    color: #333435;
+}
+
+.scrap-result ul li:last-child {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+.scrap-result ul li a {
+    color: #007bff; /* Cor do link */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.scrap-result ul li a:hover {
+    color: #0056b3; /* Cor do link ao passar o mouse */
+}
+
+.extract {
+    margin-top: 0px;
+    width: 40%; /* Faz a div ocupar 40% da largura da tela */
+    height: 50vh; /* Faz a div ocupar 50% da altura da tela */
+    padding: 0px;
+    background-color: #f9f9f9; /* Fundo claro */
+    border: 1px solid #ccc; /* Borda cinza */
+    border-radius: 15px; /* Bordas arredondadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    overflow: auto; /* Adiciona barra de rolagem se o conteúdo ultrapassar a altura */
+    position: relative; /* Define a posição relativa para que o botão seja posicionado dentro dela */
+}
+
+.extract h2 {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+    color: #333435;
+}
+
+.extract ul {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0;
+    min-height: 100px; /* Altura mínima para a lista */
+    border: 2px dashed #ccc; /* Borda para indicar área de drop */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.extract ul li {
+    padding: 10px;
+    background-color: #fff; /* Fundo branco */
+    border: 1px solid #ddd; /* Borda leve */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    color: #333435;
+    cursor: grab; /* Indica que o item pode ser arrastado */
+}
+
+.extract ul li.dragging {
+    opacity: 0.5; /* Reduz a opacidade enquanto arrasta */
+}
+
+.extrair {
+    position: absolute; /* Posiciona o botão em relação à div.extract */
+    bottom: 20px; /* Define a distância do botão em relação à parte inferior */
+    right: 20px; /* Define a distância do botão em relação à parte direita */
+    padding: 10px 20px;
+    background-color: #32ca34;
+    color: #333435;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.extrair:hover {
+    background-color: #28a745;
+}
+
+/* Container principal */
+.container {
+    display: flex; /* Ativa o Flexbox */
+    justify-content: space-between; /* Espaça os itens horizontalmente */
+    align-items: flex-start; /* Alinha os itens no topo */
+    width: 80%; /* Faz o container ocupar 80% da largura da tela */
+    margin: 0 auto; /* Centraliza o container horizontalmente */
+    gap: 20px; /* Espaçamento entre os dois campos */
+    padding: 20px 0; /* Espaçamento interno vertical */
+}
+
+/* Tabelas */
+table {
+    width: 100%; /* Faz a tabela ocupar toda a largura da seção */
+    border-collapse: collapse; /* Remove espaçamento entre bordas */
+    text-align: left; /* Alinha o texto à esquerda */
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+thead th {
+    background-color: #f0f0f0; /* Fundo do cabeçalho */
+    padding: 10px; /* Espaçamento interno */
+    border-bottom: 2px solid #ccc; /* Linha inferior */
+}
+
+tbody td {
+    padding: 10px; /* Espaçamento interno */
+    border-bottom: 1px solid #ddd; /* Linha inferior */
+}
+
+tbody tr:last-child td {
+    border-bottom: none; /* Remove a linha do último item */
+}
+
+/* Botão de extração */
+.extrair {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #32ca34;
+    color:#333435;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.extrair:hover {
+    background-color: #28a745;
+}
+
+@media (max-width: 999px) {
+
+    body {
+        overflow: hidden;
+        /* Garante que nada saia do corpo */
+    }
+
+    .nav-list {
+        position: absolute; /* Posiciona a lista de navegação em relação ao cabeçalho */
+        top: 8vh; /* Alinha a lista abaixo do cabeçalho */
+        right: 0; /* Alinha a lista à direita */
+        width: 50vh; /* Largura da lista de navegação */
+        height: 100vh; /* Altura da lista de navegação */
+        background: #f0f0f0; /* Cor de fundo da lista de navegação */
+        box-shadow: -5px 0 0 rgba(0, 0, 0, 0.1);
+        flex-direction: column; /* Empilha os itens verticalmente */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition:transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin: 0;
+        /* Remove margens extras */
+        opacity: 0;
+        /* Define a opacidade dos itens */
+
+    }
+
+    .user-photo {
+        margin: 20px 0;
+        /* Adiciona espaçamento ao redor da foto */
+        width: 50px;
+        /* Aumenta o tamanho da foto no menu responsivo */
+        height: 50px;
+        /* Mantém a proporção circular */
+    }
+
+    .mobile-menu {
+        display: block;
+        margin-right: 32px;
+    }
+
+    .nav-list.active {
+        transform: translateX(0);
+        /* Move a lista para a posição original */
+    }
+
+    .mobile-menu.active .line1{
+        transform: rotate(-45deg) translate(-8px, 8px);
+        /* Rotaciona o ícone do menu quando ativo */
+    }
+    .mobile-menu.active .line2{
+        opacity: 0;
+    }
+
+    .mobile-menu.active .line3{
+        transform: rotate(45deg) translate(-8px, -8px);
+        /* Rotaciona o ícone do menu quando ativo */
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+    }
+}

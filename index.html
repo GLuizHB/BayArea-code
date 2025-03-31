@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bay Área</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img src="/img/logo02.png" alt="Logo Bay Área" class="logo" width="200" height="60">
+        </a>
+        <nav>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="help.html"><span class="material-icons">help</span></a></li>
+                <li><a href="settings.html"><span class="material-icons">settings</span></a></li>
+            </ul>
+            <a href="user.html">
+                <img id="user-photo" src="/img/alex-suprun-ZHvM3XIOHoE-unsplash.jpg" alt="Foto do Usuário"
+                    class="user-photo">
+            </a>
+        </nav>
+    </header>
+    <script src="mobile-navbar.js"></script>
+    <div class="scrap">
+        <form id="scrap-form">
+            <input type="url" id="scrap-url" name="scrap-url" placeholder="https://example.com" required>
+            <button type="submit">Scraping</button>
+        </form>
+    </div>
+    <div class="container">
+        <!-- Campo de Arquivos Disponíveis -->
+        <div class="scrap-result">
+            <h2>Arquivos Disponíveis</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Proprietário</th>
+                        <th>Data de Modificação</th>
+                        <th>Tamanho</th>
+                    </tr>
+                </thead>
+                <tbody id="result-list">
+                    <!-- Os arquivos serão listados aqui dinamicamente -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Campo de Arquivos Selecionados -->
+        <div class="extract">
+            <h2>Arquivos Selecionados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Tamanho</th>
+                    </tr>
+                </thead>
+                <tbody id="extract-list">
+                    <!-- Os arquivos arrastados serão listados aqui -->
+                </tbody>
+            </table>
+            <button class="extrair">EXTRAIR</button>
+        </div>
+    </div>
+    <script src="scrap-result.js"></script>
+</body>
+
+</html>
